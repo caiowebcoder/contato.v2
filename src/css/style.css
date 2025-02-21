@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Antic+Didone&family=Quicksand:wght@300..700&display=swap');
 
 :root {
-    --color-primary: #071013;
-    --background-primary: #f2f5ea;
+    --color-primary: #f2f5ea;
+    --background-primary: #071013;
+    /* --background-primary: #f2f5ea; */
     --button-back: #7FCFE9;
+    --button-back-hover: #5fb9d6;
     --button-text: #111919;
-    --color-secondary: #1B1E1E;
-    --background-secondary: #F7F9F2;
+    --color-secondary: #f7f9f2;
+    /* --color-secondary: #1B1E1E; */
+    --background-secondary: #1b1e1e;
     
 }
 
@@ -37,7 +40,7 @@ body {
     color: var(--color-primary);
     display: flex;
     flex-direction: column;
-
+    min-height: 100dvh;
 }
 
 .header_home {
@@ -53,15 +56,21 @@ body {
 
 .list-link_header {
     margin-right: 10rem;
-    text-decoration: none;
     display: flex;
     gap: 2rem;
+    list-style-type: none;
 }
 
 .link_header {
-    color: var(--background-primary);
+    color: var(--color-primary);
     text-decoration: none;
     padding: .7rem 1rem;
+    border-radius: .5rem;
+}
+
+.link_header:hover {
+    outline: 1px solid var(--background-secondary);
+    transition-duration: 1s;
 }
 
 .caixa_home {
@@ -72,7 +81,6 @@ body {
 }
 
 .caixa-nome_home {
-    /* width: 50%; */
     margin: auto 0;
     display: flex;
     flex-direction: column;
@@ -108,6 +116,10 @@ body {
     background-color: var(--button-back);
     border-radius: .5rem;
 }
+.link_home:hover {
+    background-color: var(--button-back-hover);
+    transition-duration: .5s;
+}
 
 .caixa-img_home {
     height: 100vh;
@@ -128,18 +140,18 @@ body {
     background-color: var(--background-secondary);
     color: var(--color-secondary); 
     text-align: center;
-    margin: 0 auto;
+    min-height: 80dvh;
 }
 
 .title_sobre {
     font-size: 2rem;
     font-weight: bold;
-    margin-top: 10rem;
+    margin-top: 8rem;
 }
 
 .p_sobre {
     font-size: 1.2rem;
-    margin: 8rem 25rem;
+    margin: 6rem 25rem;
 }
 
 .container_habilidades {
@@ -194,25 +206,26 @@ body {
     border-radius: 5px;
 }
 
-.container_certificados {
-    background-color: var(--background-secondary);
-    color: var(--color-secondary); 
-}
-
 .title_certificado {
-    margin: 10rem 0 9rem;
+    margin: 8rem 0 4rem;
     text-align: center;
 }
 
 .container_certificados {
     display: flex;
     flex-direction: column;
+    background-color: var(--background-secondary);
+    color: var(--color-secondary); 
+    min-height: 130dvh;
 }
 
 .caixa_certificados {
     display: flex;
-    width: 80%;
     margin: 0 auto;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 70vw;
     gap: 2rem;
 }
 
@@ -220,14 +233,28 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1rem;
+    border-radius: .5rem;
+    width: 16rem;
     background-color: var(--background-primary);
     gap: 2rem;
 }
 
+.title-certificado_certificados {
+    margin: 0;
+}
+
+.img_certificados-all {
+    width: 80%;
+    object-fit: cover;
+    border-radius: .3rem;
+}
+
+
 .link_certificado{
-    color: var(--color-primary);
+    color: var(--button-text);
     text-decoration: none;
-    padding: .7rem 1rem;
+    padding: .6rem 1rem;
     background-color: var(--button-back);
     border-radius: .6rem;
     border: 2px solid var(--color-secondary);
@@ -236,4 +263,43 @@ body {
 .container_contato {
     background-color: var(--background-primary);
     color: var(--color-primary);
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title_contato {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.caixa_contato {
+    background-color: var(--color-secondary);
+    color: var(--button-text);
+    padding: 2rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-redes_contato {
+    text-align: center;
+}
+
+.caixa-redes_contato {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+
+.link-redes_contato {
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.redes-icons_contato {
+    width: 3rem;
 }
