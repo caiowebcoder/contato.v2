@@ -69,7 +69,7 @@ body {
 }
 
 .link_header:hover {
-    outline: 1px solid var(--background-secondary);
+    outline: 1px solid var(--color-secondary);
     transition-duration: 1s;
 }
 
@@ -123,11 +123,9 @@ body {
 
 .caixa-img_home {
     height: 100vh;
-    width: 50dvh;
+    width: 40dvh;
     margin-top: 11rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-self: flex-start;
 }
 
 .img-pessoa_home {
@@ -151,7 +149,8 @@ body {
 
 .p_sobre {
     font-size: 1.2rem;
-    margin: 6rem 25rem;
+    margin: 6rem auto;
+    width: 50%;
 }
 
 .container_habilidades {
@@ -207,7 +206,7 @@ body {
 }
 
 .title_certificado {
-    margin: 8rem 0 4rem;
+    margin: 4rem;
     text-align: center;
 }
 
@@ -257,7 +256,12 @@ body {
     padding: .6rem 1rem;
     background-color: var(--button-back);
     border-radius: .6rem;
-    border: 2px solid var(--color-secondary);
+}
+
+.link_certificado:hover {
+    background-color: var(--button-back-hover);
+    transition-duration: .5s;
+
 }
 
 .container_contato {
@@ -302,4 +306,65 @@ body {
 
 .redes-icons_contato {
     width: 3rem;
+}
+
+.redes-icons_contato:hover {
+    scale: 1.1;
+    transition-duration: .5s;
+    transition-delay: .1s;
+}
+
+@media (max-width: 756px) {
+    .header_home {
+        justify-content: space-evenly;
+    }
+    .list-link_header {
+        margin: 0;
+        gap: 1rem;
+        padding: 0;
+    }
+        .link_certificado {
+            width: 100%;
+        }
+
+        .caixa-img_home {
+            width: 0;
+        }
+
+    .caixa-nome_home {
+        width: 80%;
+    }
+    .container_sobre {
+        flex-direction: column;
+    }
+
+    .title_sobre {
+        margin: 4rem;
+    }
+
+    .p_sobre {
+        margin: 4rem auto;
+        width: 80%;
+        text-align: center;
+    }
+
+    .title_habilidades {
+        margin: 4rem 0;
+    }
+
+    .caixa_habilidades {
+        flex-direction: column;
+    }
+
+    .p_habilidades {
+        width: 80%;
+    }
+
+    .container_certificados {
+        padding-bottom: 3rem;
+    }
+
+    .link_certificado {
+        width: fit-content;
+    }
 }
