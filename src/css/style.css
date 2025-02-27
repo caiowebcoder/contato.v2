@@ -205,18 +205,19 @@ body {
     border-radius: 5px;
 }
 
-.title_certificado {
-    margin: 4rem;
-    text-align: center;
-}
-
 .container_certificados {
     display: flex;
     flex-direction: column;
     background-color: var(--background-secondary);
     color: var(--color-secondary); 
-    min-height: 130dvh;
+    padding: 4rem 0;
 }
+
+.title_certificado {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
 
 .caixa_certificados {
     display: flex;
@@ -281,12 +282,14 @@ body {
 }
 
 .caixa_contato {
-    background-color: var(--color-secondary);
+    background-color: var(--color-primary);
     color: var(--button-text);
     padding: 2rem;
     border-radius: .5rem;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    
 }
 
 .title-redes_contato {
@@ -354,6 +357,7 @@ body {
 
     .caixa_habilidades {
         flex-direction: column;
+        gap: 4rem;
     }
 
     .p_habilidades {
